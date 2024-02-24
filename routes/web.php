@@ -1,54 +1,47 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/login', function () {
-	return view('session/login');
-})->name('login');
+// Route to show the login form
+Route::get('/login', [SessionController::class, 'showLoginForm'])->name('login');
 
-Route::get('/', function () {
-    return view('welcome');
+// Route to handle login form submission
+Route::post('/login', [SessionController::class, 'login']);
+
+// Route to handle user logout
+Route::post('/logout', [SessionController::class, 'logout']);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function () {
+        return view('admin.index');
+    })->name('admin.dashboard');
+
+
+    Route::get('/appointments', function () {
+        return view('admin.appointment.appointment');
+    })->name('appointments');
+
+    Route::get('/service-orders', function () {
+        return view('admin.service-order.serviceorder');
+    })->name('service-orders');
+
+    Route::get('/clients', function () {
+        return view('admin.client.client');
+    })->name('clients');
+
+    Route::get('/employees', function () {
+        return view('admin.employee.employee');
+    })->name('employees');
+
+    Route::get('/services', function () {
+        return view('admin.service.service');
+    })->name('services');
+
+    Route::get('/income-report', function () {
+        return view('admin.report.income');
+    })->name('income-report');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
-
-Route::get('/appointments', function () {
-    return view('admin.appointment.appointment');
-});
-
-Route::get('/service-orders', function () {
-    return view('admin.service-order.serviceorder');
-});
-
-Route::get('/clients', function () {
-    return view('admin.client.client');
-});
-
-Route::get('/employees', function () {
-    return view('admin.employee.employee');
-});
-
-Route::get('/clients', function () {
-    return view('admin.client.client');
-});
-
-Route::get('/services', function () {
-    return view('admin.service.service');
-});
-
-Route::get('/income-report', function () {
-    return view('admin.report.income');
-});
