@@ -2,27 +2,23 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 
 // Route to show the login form
-Route::get('/login', [SessionController::class, 'showLoginForm'])->name('login');
+Route::get('/', [SessionController::class, 'showLoginForm'])->name('login');
 
 // Route to handle login form submission
 Route::post('/login', [SessionController::class, 'login']);
 
-// Route to handle user logout
-Route::post('/logout', [SessionController::class, 'logout']);
+// // Route to handle user logout
+// Route::match(['get', 'post'], '/logout', [SessionController::class, 'logout']);
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', function () {
-        return view('admin.index');
-    })->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'admin'])->name('dashboard');
 
-
-    Route::get('/appointments', function () {
-        return view('admin.appointment.appointment');
-    })->name('appointments');
+    Route::get('/appointments', [AdminController::class, 'appointments'])->name('appointments');
 
     Route::get('/service-orders', function () {
         return view('admin.service-order.serviceorder');
@@ -43,5 +39,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/income-report', function () {
         return view('admin.report.income');
     })->name('income-report');
+
+    Route::get('/logout', [SessionController::class, 'logout']);
+
 });
 

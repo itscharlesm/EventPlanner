@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+
 
 class SessionController extends Controller
 {
@@ -14,28 +16,31 @@ class SessionController extends Controller
     }
 
     // Handle the login form submission
-    public function login(Request $request)
+    public function login()
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
+        $validator = Validator::make(request()->all(), [
+            'email' => ['required', 'email'],
+            'password' => ['required']
         ]);
 
-        if (Auth::attempt($credentials)) {
-            // Authentication was successful
-            return redirect()->route('admin.dashboard');
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        // Authentication failed
-        dd('Login failed', $credentials); // Add this line for debugging
-        return back()->withErrors(['email' => 'Invalid login credentials']);
+        if (auth()->attempt(request()->only(['email', 'password']))) {
+            return redirect('dashboard');
+        }
+
+        return redirect()->back()->withErrors(['email' => 'Invalid Credentials!']);
     }
 
-    // Handle user logout
     public function logout()
     {
+
         Auth::logout();
-        return redirect('/');
+
+        return redirect('/')->with(['success' => 'You\'ve been logged out.']);
     }
+
 }
 
