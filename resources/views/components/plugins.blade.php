@@ -16,20 +16,5 @@
 <script src="{{ asset('import/assets/js/charts/bar-chart.js') }}"></script>
 <script src="{{ asset('import/assets/js/charts/pie-chart.js') }}"></script>
 
-<!-- Include this script at the end of your HTML body -->
-<script>
-    $(document).ready(function () {
-        // Get the current URL path and remove the leading slash
-        var path = window.location.pathname.substring(1);
-
-        // Add 'active' class to the 'Reports' menu if on the 'Income Report' page
-        if (path === 'income-report') {
-            $('#reportsMenu').addClass('active');
-            $('#collapsePages').addClass('show');
-            $('#incomeReportLink').addClass('active');
-        }
-    });
-</script>
-
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
