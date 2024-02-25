@@ -20,25 +20,15 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/appointments', [AdminController::class, 'appointments'])->name('appointments');
 
-    Route::get('/service-orders', function () {
-        return view('admin.service-order.serviceorder');
-    })->name('service-orders');
+    Route::get('/service-orders', [AdminController::class, 'service_order'])->name('service-orders');
 
-    Route::get('/clients', function () {
-        return view('admin.client.client');
-    })->name('clients');
+    Route::get('/clients', [AdminController::class, 'clients'])->name('clients');
 
-    Route::get('/employees', function () {
-        return view('admin.employee.employee');
-    })->name('employees');
+    Route::get('/employees', [AdminController::class, 'employees'])->name('employees');
 
-    Route::get('/services', function () {
-        return view('admin.service.service');
-    })->name('services');
+    Route::get('/services', [AdminController::class, 'services'])->name('services');
 
-    Route::get('/income-report', function () {
-        return view('admin.report.income');
-    })->name('income-report');
+    Route::get('/income-report', [AdminController::class, 'income'])->name('income-report');
 
     Route::get('/logout', [SessionController::class, 'logout']);
 

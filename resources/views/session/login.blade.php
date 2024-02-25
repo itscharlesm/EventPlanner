@@ -13,7 +13,7 @@
 		@csrf
 		<div class="img"><img src="{{ asset('import/assets/img/logo.png') }}" width="200" height="200" /></div>
 		<div class="title_container">
-			<p class="title">Welcome, please login your account</p>
+			<p class="title">Welcome, Please Login your Account</p>
 			<span class="subtitle">MENDOZA EVENTS</span>
 		</div>
 		@if ($errors->any())
@@ -62,7 +62,7 @@
 		<a href="register.php" class="sign-in_apl">
 			<span>Register</span>
 		</a>
-		<p class="note">Go back to homepage</p>
+		<p class="note">Go Back to Homepage</p>
 	</form>
 </body>
 
