@@ -17,15 +17,14 @@
 			<span class="subtitle">MENDOZA EVENTS</span>
 		</div>
 		@if ($errors->any())
-    <div class="bg-red-200 p-1 text-center text-danger">
-        <ul class="list-unstyled">
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-		<br>
+		<div class="bg-red-200 p-1 text-center text-danger">
+			<ul class="list-unstyled">
+				@foreach ($errors->all() as $error)
+				<li>{{ $error }}</li>
+				@endforeach
+			</ul>
+		</div>
+		@endif
 		<div class="input_container">
 			<label class="input_label" for="email_field">Email</label>
 			<svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
