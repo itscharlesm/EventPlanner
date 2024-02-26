@@ -18,62 +18,97 @@
             <!-- Main Content -->
             <div id="content">
                 @include('layouts.admin.topbar')
-                <!-- Card -->
-                <div class="card shadow mb-4 mx-4">
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3 d-flex align-items-center">
-                            <nav aria-label="breadcrumb" class="mr-auto">
-                                <h3 class="font-weight-bold text-primary" style="margin: 0 15px 10px 15px;">Services
-                                </h3>
-                                <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 15px;">
-                                    <li class="breadcrumb-item" style="font-size: 14;"><a
-                                            href="{{ url('/dashboard') }}">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" style="font-size: 14;" aria-current="page">
-                                        Services</li>
-                                </ol>
-                            </nav>
-                            <button class="btn btn-primary">
-                                <i class="fas fa-plus"></i> New Service
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered responsive" id="dataTable" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align: center">No.</th>
-                                            <th style="text-align: center">Service Name</th>
-                                            <th style="text-align: center">Cost</th>
-                                            <th style="text-align: center">Date Created</th>
-                                            <th style="text-align: center">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="text-align: center">1</td>
-                                            <td style="text-align: center">Package A</td>
-                                            <td style="text-align: center">25,000</td>
-                                            <td style="text-align: center">2024-02-26 15:45:33</td>
-                                            <td style="text-align: center">
-                                                <a href="#" class="fas fa-eye"></a>
-                                                <a href="#" class="fas fa-edit"></a>
-                                                <a href="#" class="fas fa-trash"></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <div class="row">
+                    <!-- Service Card (larger) -->
+                    <div class="col-lg-8 mb-4" style="position:relative; left:20px; top:0px;">
+                        <div class="card shadow mx-4">
+                            <!-- Content for Service Card -->
+                            <div class="card-header py-3 d-flex align-items-center">
+                                <nav aria-label="breadcrumb" class="mr-auto">
+                                    <h3 class="font-weight-bold text-primary" style="margin: 0 15px 0px 15px;">Services
+                                    </h3>
+                                    <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 15px;">
+                                        <li class="breadcrumb-item" style="font-size: 14;"><a
+                                                href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                        <li class="breadcrumb-item active" style="font-size: 14;" aria-current="page">
+                                            Services</li>
+                                    </ol>
+                                </nav>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> New Service
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <!-- Service Card Content -->
+                                <div class="table-responsive">
+                                    <table class="table table-bordered responsive" id="dataTable" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: center">No.</th>
+                                                <th style="text-align: center">Service Name</th>
+                                                <th style="text-align: center">Cost</th>
+                                                <th style="text-align: center">Date Created</th>
+                                                <th style="text-align: center">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center">1</td>
+                                                <td style="text-align: center">Package A</td>
+                                                <td style="text-align: center">25,000</td>
+                                                <td style="text-align: center">2024-02-26 15:45:33</td>
+                                                <td style="text-align: center">
+                                                    <a href="#" class="fas fa-eye"></a>
+                                                    <a href="#" class="fas fa-edit"></a>
+                                                    <a href="#" class="fas fa-trash"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- End of Main Content -->
+                    <!-- Categories Card (smaller) -->
+                    <div class="col-lg-4 mb-4" style="position:relative; right:20px; top:0px;">
+                        <div class="card shadow mx-4">
+                            <div class="card-content">
+                                <!-- Content for Categories Card -->
+                                <div class="card-header py-3 d-flex align-items-center">
+                                    <nav aria-label="breadcrumb" class="d-flex align-items-center">
+                                        <h5 class="font-weight-bold text-primary" style="margin: 0 15px 0px 15px;">
+                                            Services</h5>
+                                    </nav>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: center">No.</th>
+                                                <th style="text-align: center">Category</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center">1</td>
+                                                <td style="text-align: center"><a type="button">Category Name</a></td>
+                                            </tr>
+                                            <!-- Add more rows as needed -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- End of Content Wrapper -->
             </div>
-            <!-- End of Page Wrapper -->
-            @include('layouts.admin.logout')
-            @include('components.plugins')
-            @include('components.table')
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    @include('layouts.admin.logout')
+    @include('components.plugins')
+    @include('components.table')
 </body>
 
 </html>
