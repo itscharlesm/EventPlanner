@@ -23,6 +23,7 @@
                 <!-- End of Main Content -->
             </div>
             <!-- End of Content Wrapper -->
+            @include('layouts.admin.footer')
         </div>
         <!-- End of Page Wrapper -->
         @include('layouts.admin.logout')

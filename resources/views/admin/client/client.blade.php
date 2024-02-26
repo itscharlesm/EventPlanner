@@ -18,25 +18,28 @@
             <!-- Main Content -->
             <div id="content">
                 @include('layouts.admin.topbar')
-                <!-- Begin Page Content -->
                 <!-- Card -->
                 <div class="card shadow mb-4 mx-4">
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 d-flex align-items-center">
-                            <h2 class="m-0 font-weight-bold text-primary">Clients</h6>
-                            <button class="btn btn-success ml-auto">Register a Customer</button>
+                            <h2 class="m-0 font-weight-bold text-primary">Appointments</h6>
+                                <button class="btn btn-success ml-auto">
+                                    <i class="fas fa-plus"></i> Book Appointment
+                                </button>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered responsive" id="dataTable" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center">ID</th>
-                                            <th style="text-align: center">Last Name</th>
-                                            <th style="text-align: center">First Name</th>
+                                            <th style="text-align: center">No.</th>
+                                            <th style="text-align: center">Appointment Number</th>
+                                            <th style="text-align: center">Customer Name</th>
                                             <th style="text-align: center">Mobile Number</th>
-                                            <th style="text-align: center">Email</th>
+                                            <th style="text-align: center">Date</th>
+                                            <th style="text-align: center">Time</th>
+                                            <th style="text-align: center">Status</th>
                                             <th style="text-align: center">Action</th>
                                         </tr>
                                     </thead>
@@ -77,10 +80,13 @@
                 </div>
                 <!-- End of Content Wrapper -->
             </div>
-            <!-- End of Page Wrapper -->
-            @include('layouts.admin.logout')
-            @include('components.plugins')
-            @include('components.table')
+            <!-- End of Content Wrapper -->
+            @include('layouts.admin.footer')
+        </div>
+        <!-- End of Page Wrapper -->
+        @include('layouts.admin.logout')
+        @include('components.plugins')
+        @include('components.table')
 </body>
 
 </html>
