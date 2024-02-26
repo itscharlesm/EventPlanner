@@ -4,12 +4,15 @@
     @include('components.head')
     <title>Admin Dashboard</title>
     @include('components.table')
+    @php
+    $activePage = 'client'; // set the active page dynamically based on your route or controller logic
+    @endphp
 </head>
 
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-        @include('layouts.admin.sidebar')
+        @include('layouts.admin.sidebar', ['activePage' => $activePage])
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
