@@ -23,29 +23,19 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 d-flex align-items-center">
                             <nav aria-label="breadcrumb" class="mr-auto">
-                                <h3 class="m-0 font-weight-bold text-primary">Appointments</h3>
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Appointments</li>
+                                <h3 class="font-weight-bold text-primary" style="margin: 0 15px 10px 15px;">Appointments
+                                </h3>
+                                <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 15px;">
+                                    <li class="breadcrumb-item" style="font-size: 14;"><a
+                                            href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" style="font-size: 14;" aria-current="page">
+                                        Appointments</li>
                                 </ol>
                             </nav>
                             <button class="btn btn-success">
                                 <i class="fas fa-plus"></i> Book Appointment
                             </button>
                         </div>
-                        <!-- <div class="card-header py-3 d-flex align-items-center">
-    <nav aria-label="breadcrumb" class="mr-auto">
-        <h3 class="m-0 font-weight-bold text-primary">Appointments</h3>
-        <ol class="breadcrumb m-0" style="background-color: transparent;">
-            <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Appointments</li>
-        </ol>
-    </nav>
-    <button class="btn btn-success">
-        <i class="fas fa-plus"></i> Book Appointment
-    </button>
-</div> -->
-
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered responsive" id="dataTable" cellspacing="0">
