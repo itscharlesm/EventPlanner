@@ -32,7 +32,7 @@
                                         Appointments</li>
                                 </ol>
                             </nav>
-                            <button class="btn btn-success">
+                            <button class="btn btn-primary">
                                 <i class="fas fa-plus"></i> Book Appointment
                             </button>
                         </div>
@@ -53,13 +53,13 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>512662326</td>
-                                            <td>Mendoza, Kylle Adyzza I.</td>
-                                            <td>09205433548</td>
-                                            <td>02/26/2024</td>
-                                            <td>2:00 PM</td>
-                                            <td>Scheduled</td>
+                                            <td style="text-align: center">1</td>
+                                            <td style="text-align: center">512662326</td>
+                                            <td style="text-align: center">Mendoza, Kylle Adyzza I.</td>
+                                            <td style="text-align: center">09205433548</td>
+                                            <td style="text-align: center">02/26/2024</td>
+                                            <td style="text-align: center">2:00 PM</td>
+                                            <td style="text-align: center">Scheduled</td>
                                             <td style="text-align: center">
                                                 <a href="#" class="fas fa-eye"></a>
                                                 <a href="#" class="fas fa-edit"></a>

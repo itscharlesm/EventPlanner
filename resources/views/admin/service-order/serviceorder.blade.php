@@ -34,7 +34,7 @@
                                         Service Orders</li>
                                 </ol>
                             </nav>
-                            <button class="btn btn-success">
+                            <button class="btn btn-primary">
                                 <i class="fas fa-plus"></i> New Order
                             </button>
                         </div>
@@ -43,41 +43,26 @@
                                 <table class="table table-bordered responsive" id="dataTable" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center">ID</th>
-                                            <th style="text-align: center">Last Name</th>
-                                            <th style="text-align: center">First Name</th>
-                                            <th style="text-align: center">Mobile Number</th>
-                                            <th style="text-align: center">Email</th>
+                                            <th style="text-align: center">No.</th>
+                                            <th style="text-align: center">Customer Name</th>
+                                            <th style="text-align: center">Type</th>
+                                            <th style="text-align: center">Status</th>
+                                            <th style="text-align: center">Date Created</th>
                                             <th style="text-align: center">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Mendoza</td>
-                                            <td>Kylle Adyzza</td>
-                                            <td>09205433548</td>
-                                            <td>k.mendoza.522854@umindanao.edu.ph</td>
+                                            <td style="text-align: center">1</td>
+                                            <td style="text-align: center">Mendoza, Kylle Adyzza I.</td>
+                                            <td style="text-align: center">Appointment</td>
+                                            <td style="text-align: center">Ongoing</td>
+                                            <td style="text-align: center">2024-02-26 20:59:27</td>
                                             <td style="text-align: center">
-                                                <!-- View button with primary style -->
-                                                <button class="btn btn-sm btn-primary" data-toggle="tooltip"
-                                                    data-placement="top" title="View">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-
-                                                <!-- Edit button with warning style -->
-                                                <button class="btn btn-sm btn-warning" data-toggle="tooltip"
-                                                    data-placement="top" title="Edit">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-
-                                                <!-- Delete button with danger style -->
-                                                <button class="btn btn-sm btn-danger" data-toggle="tooltip"
-                                                    data-placement="top" title="Delete">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
+                                                <a href="#" class="fas fa-eye"></a>
+                                                <a href="#" class="fas fa-edit"></a>
+                                                <a href="#" class="fas fa-trash"></a>
                                             </td>
-
                                         </tr>
                                     </tbody>
                                 </table>
