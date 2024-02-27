@@ -24,9 +24,9 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 d-flex align-items-center">
                             <nav aria-label="breadcrumb" class="mr-auto">
-                                <h3 class="font-weight-bold text-primary" style="margin: 0 15px 10px 15px;">Clients
+                                <h3 class="font-weight-bold text-primary" style="margin: 0 15px 10px 10px;">Clients
                                 </h3>
-                                <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 15px;">
+                                <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 10px;">
                                     <li class="breadcrumb-item" style="font-size: 14;"><a
                                             href="{{ url('/dashboard') }}">Dashboard</a></li>
                                     <li class="breadcrumb-item active" style="font-size: 14;" aria-current="page">

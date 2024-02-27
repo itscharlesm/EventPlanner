@@ -25,9 +25,9 @@
                             <!-- Content for Service Card -->
                             <div class="card-header py-3 d-flex align-items-center">
                                 <nav aria-label="breadcrumb" class="mr-auto">
-                                    <h3 class="font-weight-bold text-primary" style="margin: 0 15px 0px 15px;">Services
+                                    <h3 class="font-weight-bold text-primary" style="margin: 0 15px 0px 10px;">Services
                                     </h3>
-                                    <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 15px;">
+                                    <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 10px;">
                                         <li class="breadcrumb-item" style="font-size: 14;"><a
                                                 href="{{ url('/dashboard') }}">Dashboard</a></li>
                                         <li class="breadcrumb-item active" style="font-size: 14;" aria-current="page">
@@ -76,7 +76,7 @@
                                 <!-- Content for Categories Card -->
                                 <div class="card-header py-3 d-flex align-items-center">
                                     <nav aria-label="breadcrumb" class="d-flex align-items-center">
-                                        <h5 class="font-weight-bold text-primary" style="margin: 0 15px 0px 15px;">
+                                        <h5 class="font-weight-bold text-primary" style="margin: 0 15px 0px 10px;">
                                             Services</h5>
                                     </nav>
                                 </div>
@@ -102,6 +102,7 @@
                     </div>
                 </div>
             </div>
+            @include('layouts.admin.footer')
         </div>
         <!-- End of Content Wrapper -->
     </div>
