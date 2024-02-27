@@ -20,23 +20,20 @@
                 @include('layouts.admin.topbar')
                 <div class="row">
                     <!-- Service Card (larger) -->
-                    <div class="col-lg-8 mb-4" style="position:relative; left:20px; top:0px;">
+                    <div class="col-lg-9 mb-4" style="position:relative; left:20px; top:0px;">
                         <div class="card shadow mx-4">
                             <!-- Content for Service Card -->
                             <div class="card-header py-3 d-flex align-items-center">
-                                <nav aria-label="breadcrumb" class="mr-auto">
-                                    <h3 class="font-weight-bold text-primary" style="margin: 0 15px 0px 10px;">Services
-                                    </h3>
-                                    <ol class="breadcrumb m-0" style="background-color: transparent; padding: 0 10px;">
-                                        <li class="breadcrumb-item" style="font-size: 14;"><a
-                                                href="{{ url('/dashboard') }}">Dashboard</a></li>
-                                        <li class="breadcrumb-item active" style="font-size: 14;" aria-current="page">
-                                            Services</li>
-                                    </ol>
+                                <nav aria-label="breadcrumb" class="d-flex align-items-center">
+                                    <h5 class="font-weight-bold text-primary" style="margin: 0 15px 0px 10px;">
+                                        Services
+                                    </h5>
                                 </nav>
-                                <button class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> New Service
-                                </button>
+                                <div class="ml-auto">
+                                    <a href="#">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <!-- Service Card Content -->
@@ -70,15 +67,21 @@
                         </div>
                     </div>
                     <!-- Categories Card (smaller) -->
-                    <div class="col-lg-4 mb-4" style="position:relative; right:20px; top:0px;">
+                    <div class="col-lg-3 mb-4" style="position:relative; right:20px; top:0px;">
                         <div class="card shadow mx-4">
                             <div class="card-content">
                                 <!-- Content for Categories Card -->
                                 <div class="card-header py-3 d-flex align-items-center">
                                     <nav aria-label="breadcrumb" class="d-flex align-items-center">
                                         <h5 class="font-weight-bold text-primary" style="margin: 0 15px 0px 10px;">
-                                            Services</h5>
+                                            Services
+                                        </h5>
                                     </nav>
+                                    <div class="ml-auto">
+                                        <a href="#">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover">

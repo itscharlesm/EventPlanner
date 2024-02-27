@@ -78,8 +78,14 @@
                                 <div class="card-header py-3 d-flex align-items-center">
                                     <nav aria-label="breadcrumb" class="d-flex align-items-center">
                                         <h5 class="font-weight-bold text-primary" style="margin: 0 15px 0px 10px;">
-                                            Roles</h5>
+                                            Roles
+                                        </h5>
                                     </nav>
+                                    <div class="ml-auto">
+                                        <a href="#" data-toggle="modal" data-target="#addRole">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover">
@@ -115,6 +121,7 @@
         <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
+    @include('admin.employee.modals')
     @include('layouts.admin.logout')
     @include('components.plugins')
     @include('components.table')
