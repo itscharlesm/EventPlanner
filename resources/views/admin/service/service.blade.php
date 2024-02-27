@@ -53,10 +53,10 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td style="text-align: center">1</td>
-                                                <td style="text-align: center">Package A</td>
-                                                <td style="text-align: center">25,000</td>
-                                                <td style="text-align: center">2024-02-26 15:45:33</td>
+                                                <td style="text-align: left">1</td>
+                                                <td style="text-align: left">Package A</td>
+                                                <td style="text-align: left">25,000</td>
+                                                <td style="text-align: left">2024-02-26 15:45:33</td>
                                                 <td style="text-align: center">
                                                     <a href="#" class="fas fa-eye"></a>
                                                     <a href="#" class="fas fa-edit"></a>
@@ -84,14 +84,14 @@
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                                <th style="text-align: center">No.</th>
-                                                <th style="text-align: center">Category</th>
+                                                <th style="text-align: left">No.</th>
+                                                <th style="text-align: left">Category</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td style="text-align: center">1</td>
-                                                <td style="text-align: center"><a type="button">Category Name</a></td>
+                                                <td style="text-align: left">1</td>
+                                                <td style="text-align: left"><a type="button">Category Name</a></td>
                                             </tr>
                                             <!-- Add more rows as needed -->
                                         </tbody>

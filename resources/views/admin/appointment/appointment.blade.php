@@ -53,13 +53,13 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td style="text-align: center">1</td>
-                                            <td style="text-align: center">512662326</td>
-                                            <td style="text-align: center">Mendoza, Kylle Adyzza I.</td>
-                                            <td style="text-align: center">09205433548</td>
-                                            <td style="text-align: center">02/26/2024</td>
-                                            <td style="text-align: center">2:00 PM</td>
-                                            <td style="text-align: center">Scheduled</td>
+                                            <td style="text-align: left">1</td>
+                                            <td style="text-align: left">512662326</td>
+                                            <td style="text-align: left">Mendoza, Kylle Adyzza I.</td>
+                                            <td style="text-align: left">09205433548</td>
+                                            <td style="text-align: left">02/26/2024</td>
+                                            <td style="text-align: left">2:00 PM</td>
+                                            <td style="text-align: left">Scheduled</td>
                                             <td style="text-align: center">
                                                 <a href="#" class="fas fa-eye"></a>
                                                 <a href="#" class="fas fa-edit"></a>

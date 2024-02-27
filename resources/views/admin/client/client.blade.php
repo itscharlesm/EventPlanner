@@ -52,11 +52,11 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td style="text-align: center">1</td>
-                                            <td style="text-align: center">Mendoza</td>
-                                            <td style="text-align: center">Kylle Adyzza</td>
-                                            <td style="text-align: center">09205433548</td>
-                                            <td style="text-align: center">k.mendoza.522854@umindanao.edu.ph</td>
+                                            <td style="text-align: left">1</td>
+                                            <td style="text-align: left">Mendoza</td>
+                                            <td style="text-align: left">Kylle Adyzza</td>
+                                            <td style="text-align: left">09205433548</td>
+                                            <td style="text-align: left">k.mendoza.522854@umindanao.edu.ph</td>
                                             <td style="text-align: center">
                                                 <a href="#" class="fas fa-eye"></a>
                                                 <a href="#" class="fas fa-edit"></a>
