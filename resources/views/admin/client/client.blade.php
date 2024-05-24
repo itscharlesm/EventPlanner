@@ -33,7 +33,7 @@
                                         Clients</li>
                                 </ol>
                             </nav>
-                            <button class="btn btn-primary">
+                            <button href="#" data-toggle="modal" data-target="#addClient" class="btn btn-primary">
                                 <i class="fas fa-plus"></i> New Client
                             </button>
                         </div>
@@ -77,6 +77,7 @@
             @include('layouts.admin.footer')
         </div>
         <!-- End of Page Wrapper -->
+        @include('admin.client.client-modal')
         @include('layouts.admin.logout')
         @include('components.plugins')
         @include('components.table')
