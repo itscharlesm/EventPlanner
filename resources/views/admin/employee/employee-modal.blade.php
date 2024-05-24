@@ -1,4 +1,4 @@
-<!-- ADD ROLE MODAL -->
+<!-- ADD EMPLOYEE MODAL -->
 <div class="modal fade text-left" id="addEmployee" tabindex="-1" role="dialog" aria-labelledby="addEmployeeModal"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">

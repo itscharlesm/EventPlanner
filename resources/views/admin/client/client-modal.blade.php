@@ -1,4 +1,4 @@
-<!-- ADD ROLE MODAL -->
+<!-- ADD CLIENT MODAL -->
 <div class="modal fade text-left" id="addClient" tabindex="-1" role="dialog" aria-labelledby="addClientModal"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">

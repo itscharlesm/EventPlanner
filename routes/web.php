@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/income-report', [AdminController::class, 'income'])->name('income-report');
 
     Route::get('/logout', [SessionController::class, 'logout']);
+
+    Route::post('/save-role', [RoleController::class, 'saveRole'])->name('save.role');
+    Route::get('/roles', [RoleController::class, 'getRoles'])->name('roles');
 
 });
 
