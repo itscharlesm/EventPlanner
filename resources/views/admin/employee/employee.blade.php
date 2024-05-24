@@ -33,8 +33,8 @@
                                             Employees</li>
                                     </ol>
                                 </nav>
-                                <button class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> New Employee
+                                <button href="#" data-toggle="modal" data-target="#addEmployee" class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> Add Employee
                                 </button>
                             </div>
                             <div class="card-body">
@@ -53,12 +53,12 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td style="text-align: left">1</td>
-                                                <td style="text-align: left">Mendoza</td>
-                                                <td style="text-align: left">Charleslexcel</td>
-                                                <td style="text-align: left">09062913082</td>
-                                                <td style="text-align: left">itscharlesm@gmail.com</td>
-                                                <td style="text-align: left">
+                                                <td style="text-align: center">1</td>
+                                                <td style="text-align: center">Mendoza</td>
+                                                <td style="text-align: center">Charleslexcel</td>
+                                                <td style="text-align: center">09062913082</td>
+                                                <td style="text-align: center">itscharlesm@gmail.com</td>
+                                                <td style="text-align: center">
                                                     <a href="#" class="fas fa-eye"></a>
                                                     <a href="#" class="fas fa-edit"></a>
                                                     <a href="#" class="fas fa-trash"></a>
@@ -121,7 +121,8 @@
         <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
-    @include('admin.employee.modals')
+    @include('admin.employee.employee-modal')
+    @include('admin.employee.role-modal')
     @include('layouts.admin.logout')
     @include('components.plugins')
     @include('components.table')

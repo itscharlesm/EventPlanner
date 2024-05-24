@@ -53,11 +53,11 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td style="text-align: left">1</td>
-                                            <td style="text-align: left">Mendoza, Kylle Adyzza I.</td>
-                                            <td style="text-align: left">Appointment</td>
-                                            <td style="text-align: left">Ongoing</td>
-                                            <td style="text-align: left">2024-02-26 20:59:27</td>
+                                            <td style="text-align: center">1</td>
+                                            <td style="text-align: center">Mendoza, Kylle Adyzza I.</td>
+                                            <td style="text-align: center">Appointment</td>
+                                            <td style="text-align: center">Ongoing</td>
+                                            <td style="text-align: center">2024-02-26 20:59:27</td>
                                             <td style="text-align: center">
                                                 <a href="#" class="fas fa-eye"></a>
                                                 <a href="#" class="fas fa-edit"></a>

@@ -50,10 +50,10 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td style="text-align: left">1</td>
-                                                <td style="text-align: left">Package A</td>
-                                                <td style="text-align: left">25,000</td>
-                                                <td style="text-align: left">2024-02-26 15:45:33</td>
+                                                <td style="text-align: center">1</td>
+                                                <td style="text-align: center">Package A</td>
+                                                <td style="text-align: center">25,000</td>
+                                                <td style="text-align: center">2024-02-26 15:45:33</td>
                                                 <td style="text-align: center">
                                                     <a href="#" class="fas fa-eye"></a>
                                                     <a href="#" class="fas fa-edit"></a>
