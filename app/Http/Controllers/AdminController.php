@@ -56,7 +56,7 @@ class AdminController extends Controller
 
     public function service_order()
     {
-        return view('admin.service-order.serviceorder', [
+        return view('admin.service-order.service-order', [
             'user' => auth()->user()
         ]);
     }

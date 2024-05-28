@@ -19,9 +19,9 @@
                                     <label class="form-label text-dark">Role:</label>
                                     <select class="form-control" name="role" id="roleID">
                                         <option value=""></option>
-                                        <option value="Admin">Admin</option>
-                                        <option value="Owner">Owner</option>
-                                        <option value="Employee">Employee</option>
+                                        <?php foreach ($roles as $role): ?>
+                                        <option value="<?php    echo $role->roleID; ?>"><?php    echo $role->role; ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
@@ -42,7 +42,8 @@
                             <div class="col-4">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Middle Name:</label>
-                                    <input type="text" class="form-control" placeholder="(Optional)" name="middlename" id="middleName">
+                                    <input type="text" class="form-control" placeholder="(Optional)" name="middlename"
+                                        id="middleName">
                                 </div>
                             </div>
                         </div>
@@ -50,7 +51,8 @@
                             <div class="col-6">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Birth Date:</label>
-                                    <input type="date" class="form-control" name="birthdate" id="birthDate" onchange="calculateAge()">
+                                    <input type="date" class="form-control" name="birthdate" id="birthDate"
+                                        onchange="calculateAge()">
                                 </div>
                             </div>
                             <div class="col-6">
@@ -70,7 +72,8 @@
                             <div class="col-4">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Mobile Number:</label>
-                                    <input type="text" placeholder="9xxxxxxxxx" class="form-control" name="mobilenumber" id="mobileNumber">
+                                    <input type="text" placeholder="9xxxxxxxxx" class="form-control" name="mobilenumber"
+                                        id="mobileNumber">
                                 </div>
                             </div>
                         </div>
@@ -102,28 +105,28 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('birthDate').addEventListener('change', calculateAge);
-});
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('birthDate').addEventListener('change', calculateAge);
+    });
 
-function calculateAge() {
-    const birthDate = document.getElementById('birthDate').value;
-    const ageField = document.getElementById('age');
+    function calculateAge() {
+        const birthDate = document.getElementById('birthDate').value;
+        const ageField = document.getElementById('age');
 
-    if (birthDate) {
-        const today = new Date();
-        const birthDateObj = new Date(birthDate);
-        let age = today.getFullYear() - birthDateObj.getFullYear();
-        const monthDifference = today.getMonth() - birthDateObj.getMonth();
+        if (birthDate) {
+            const today = new Date();
+            const birthDateObj = new Date(birthDate);
+            let age = today.getFullYear() - birthDateObj.getFullYear();
+            const monthDifference = today.getMonth() - birthDateObj.getMonth();
 
-        // Adjust age if the birth month hasn't occurred yet this year, or if the birthday hasn't occurred yet this month
-        if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDateObj.getDate())) {
-            age--;
+            // Adjust age if the birth month hasn't occurred yet this year, or if the birthday hasn't occurred yet this month
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDateObj.getDate())) {
+                age--;
+            }
+
+            ageField.value = age;
+        } else {
+            ageField.value = '';
         }
-
-        ageField.value = age;
-    } else {
-        ageField.value = '';
     }
-}
 </script>
