@@ -4,7 +4,7 @@
     @include('components.head')
     <title>Admin Dashboard</title>
     @php
-$activePage = 'setting'; // set the active page dynamically based on your route or controller logic
+        $activePage = 'setting'; // set the active page dynamically based on your route or controller logic
     @endphp
 </head>
 
@@ -17,11 +17,11 @@ $activePage = 'setting'; // set the active page dynamically based on your route 
             <!-- Main Content -->
             <div id="content">
                 @include('layouts.admin.topbar')
-                    @if(session('success'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('success') }}
-                        </div>
-                    @endif
+                @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="row">
                     <!-- Service Card (larger) -->
                     <div class="col-lg-9 mb-4" style="position:relative; left:20px; top:0px;">
@@ -101,9 +101,9 @@ $activePage = 'setting'; // set the active page dynamically based on your route 
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($roles as $index => $role)
+                                            @foreach($roles as $role)
                                                 <tr>
-                                                    <td style="text-align: left">{{ $index + 1 }}</td>
+                                                    <td style="text-align: left">{{ $role->roleID }}</td>
                                                     <td style="text-align: left"><a type="button">{{ $role->role }}</a></td>
                                                 </tr>
                                             @endforeach

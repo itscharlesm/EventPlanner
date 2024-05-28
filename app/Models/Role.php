@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+// Remove the creating event from Role model
 class Role extends Model
 {
     use HasFactory;
@@ -12,6 +13,7 @@ class Role extends Model
     protected $table = 'role'; // Specify the table name
 
     protected $fillable = [
+        'roleID',
         'role',
         'description',
     ];

@@ -13,11 +13,17 @@ class CreateRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
-            $table->id('roleID');
+        Schema::create('role', function (Blueprint $table) { 
+            $table->id(); // Primary key column (id)
+            $table->unsignedBigInteger('roleID')->unique(); // Unique roleID column
             $table->text('role');
             $table->text('description')->nullable();
             $table->timestamps();
+        });
+        
+        // Ensure that the roleID is the same as id
+        Schema::table('role', function (Blueprint $table) {
+            $table->foreign('roleID')->references('id')->on('role');
         });
     }
 
@@ -28,6 +34,6 @@ class CreateRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('role'); 
     }
 }

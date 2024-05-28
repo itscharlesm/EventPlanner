@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Role; // Make sure to import your Role model
+use App\Models\Role;
 
 class RoleController extends Controller
 {
@@ -16,12 +16,14 @@ class RoleController extends Controller
             'description' => 'nullable|string|max:255',
         ]);
 
+        // Generate a unique roleID
+        $roleID = Role::max('roleID') + 1;
+
         // Create a new role instance
         $role = new Role;
+        $role->roleID = $roleID;
         $role->role = $validatedData['role'];
         $role->description = $validatedData['description'];
-
-        // Save the role to the database
         $role->save();
 
         // Flash success message to session
@@ -29,16 +31,14 @@ class RoleController extends Controller
 
         // Redirect to the 'employees' route
         return redirect()->route('employees');
-
     }
+
     public function getRoles()
     {
         // Fetch all roles from the database
         $roles = Role::all();
 
-        // Pass the roles data to the view
+        // Return the roles
         return $roles;
     }
 }
-
-

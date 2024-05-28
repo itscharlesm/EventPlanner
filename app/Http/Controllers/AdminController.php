@@ -1,11 +1,9 @@
 <?php
 
-// AdminController.php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\RoleController;
+use App\Models\Role;
 
 class AdminController extends Controller
 {
@@ -30,10 +28,10 @@ class AdminController extends Controller
         ]);
     }
 
-    public function employees(RoleController $roleController)
+    public function employees()
     {
-        // Fetch roles using RoleController
-        $roles = $roleController->getRoles();
+        // Fetch roles directly using the Role model
+        $roles = Role::all();
 
         // Render the view for the Employees page and pass the roles data
         return view('admin.employee.employee', [
