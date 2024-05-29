@@ -56,5 +56,4 @@ class EmployeeController extends Controller
         return $employees;
     }
 
-
 }

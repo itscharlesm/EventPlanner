@@ -29,6 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/employees', [AdminController::class, 'employees'])->name('employees');
     Route::post('/employee/store', [EmployeeController::class, 'store'])->name('employee.store');
     Route::get('/employee', [RoleController::class, 'getEmployees'])->name('employees');
+
     Route::post('/save-role', [RoleController::class, 'saveRole'])->name('save.role');
     Route::get('/roles', [RoleController::class, 'getRoles'])->name('roles');
 

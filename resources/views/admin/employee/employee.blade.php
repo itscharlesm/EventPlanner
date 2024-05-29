@@ -74,7 +74,7 @@
                                                 <td style="text-align: center">{{ $employee->mobile_number }}</td>
                                                 <td style="text-align: center">{{ $employee->email }}</td>
                                                 <td style="text-align: center">
-                                                    <a href="#" class="fas fa-eye"></a>
+                                                    <a href="#" data-toggle="modal" data-target="#viewEmployee{{ $employee->id }}" class="fas fa-eye"></a>
                                                     <a href="#" class="fas fa-edit"></a>
                                                     <a href="#" class="fas fa-trash"></a>
                                                 </td>
