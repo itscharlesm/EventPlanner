@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Models\Employee;
 
 class AdminController extends Controller
 {
@@ -30,13 +31,15 @@ class AdminController extends Controller
 
     public function employees()
     {
-        // Fetch roles directly using the Role model
+        // Fetch roles and employees directly using the Role model and Employee Model
         $roles = Role::all();
+        $employees = Employee::all();
 
-        // Render the view for the Employees page and pass the roles data
+        // Render the view for the Employees page and pass the roles data and employees data
         return view('admin.employee.employee', [
             'user' => auth()->user(),
-            'roles' => $roles
+            'roles' => $roles,
+            'employees' => $employees
         ]);
     }
 

@@ -66,18 +66,20 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ( $employees as $employee )
                                             <tr>
-                                                <td style="text-align: center">1</td>
-                                                <td style="text-align: center">Mendoza</td>
-                                                <td style="text-align: center">Charleslexcel</td>
-                                                <td style="text-align: center">09062913082</td>
-                                                <td style="text-align: center">itscharlesm@gmail.com</td>
+                                                <td style="text-align: center">{{ $employee->id }}</td>
+                                                <td style="text-align: center">{{ $employee->lastName }}</td>
+                                                <td style="text-align: center">{{ $employee->firstName }}</td>
+                                                <td style="text-align: center">{{ $employee->mobile_number }}</td>
+                                                <td style="text-align: center">{{ $employee->email }}</td>
                                                 <td style="text-align: center">
                                                     <a href="#" class="fas fa-eye"></a>
                                                     <a href="#" class="fas fa-edit"></a>
                                                     <a href="#" class="fas fa-trash"></a>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

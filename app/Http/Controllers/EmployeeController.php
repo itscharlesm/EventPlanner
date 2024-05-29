@@ -47,5 +47,14 @@ class EmployeeController extends Controller
         return redirect()->back()->with('success', 'Employee added successfully');
     }
 
+    public function getEmployees()
+    {
+        // Fetch all employees from the database
+        $employees = Employee::all();
+
+        // Return the employees
+        return $employees;
+    }
+
 
 }
