@@ -22,6 +22,15 @@
                         {{ session('success') }}
                     </div>
                 @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="row">
                     <!-- Service Card (larger) -->
                     <div class="col-lg-9 mb-4" style="position:relative; left:20px; top:0px;">

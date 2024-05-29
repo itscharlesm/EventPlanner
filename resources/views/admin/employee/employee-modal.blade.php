@@ -3,8 +3,9 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         <div class="modal-content">
-            <form class="form form-vertical" method="POST" enctype="multipart/form-data" name="add"
-                data-parsley-validate>
+            <form class="form form-vertical" method="POST" action="{{ route('employee.store') }}"
+                enctype="multipart/form-data" name="add" data-parsley-validate>
+                @csrf
                 <div class="modal-header bg-primary d-flex align-items-center justify-content-between">
                     <h5 class="modal-title text-white">New Employee</h5>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
@@ -17,11 +18,11 @@
                             <div class="col-12">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Role:</label>
-                                    <select class="form-control" name="role" id="roleID">
+                                    <select class="form-control" name="roleID" id="roleID">
                                         <option value=""></option>
-                                        <?php foreach ($roles as $role): ?>
-                                        <option value="<?php    echo $role->roleID; ?>"><?php    echo $role->role; ?></option>
-                                        <?php endforeach; ?>
+                                        @foreach ($roles as $role)
+                                            <option value="{{ $role->id }}">{{ $role->role }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -30,19 +31,19 @@
                             <div class="col-4">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Last Name:</label>
-                                    <input type="text" class="form-control" name="lastname" id="lastName">
+                                    <input type="text" class="form-control" name="lastName" id="lastName">
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">First Name:</label>
-                                    <input type="text" class="form-control" name="firstname" id="firstName">
+                                    <input type="text" class="form-control" name="firstName" id="firstName">
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Middle Name:</label>
-                                    <input type="text" class="form-control" placeholder="(Optional)" name="middlename"
+                                    <input type="text" class="form-control" placeholder="(Optional)" name="middleName"
                                         id="middleName">
                                 </div>
                             </div>
@@ -51,7 +52,7 @@
                             <div class="col-6">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Birth Date:</label>
-                                    <input type="date" class="form-control" name="birthdate" id="birthDate"
+                                    <input type="date" class="form-control" name="birthDate" id="birthDate"
                                         onchange="calculateAge()">
                                 </div>
                             </div>
@@ -66,14 +67,14 @@
                             <div class="col-8">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Address:</label>
-                                    <input type="text" class="form-control" name="firstname" id="firstName">
+                                    <input type="text" class="form-control" name="address" id="address">
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Mobile Number:</label>
-                                    <input type="text" placeholder="9xxxxxxxxx" class="form-control" name="mobilenumber"
-                                        id="mobileNumber">
+                                    <input type="text" placeholder="9xxxxxxxxx" class="form-control"
+                                        name="mobile_number" id="mobile_number">
                                 </div>
                             </div>
                         </div>
@@ -81,7 +82,7 @@
                             <div class="col-12">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Email:</label>
-                                    <input type="text" class="form-control" name="email" id="email">
+                                    <input type="email" class="form-control" name="email" id="email">
                                 </div>
                             </div>
                         </div>
@@ -89,14 +90,14 @@
                             <div class="col-12">
                                 <div class="form-group mandatory">
                                     <label class="form-label text-dark">Password:</label>
-                                    <input type="text" class="form-control" name="password" id="password">
+                                    <input type="password" class="form-control" name="password" id="password">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="submitRole" class="btn btn-primary me-1 mb-1">Submit</button>
+                    <button type="submit" id="submitRole" class="btn btn-primary me-1 mb-1">Submit</button>
                     <button type="button" class="btn btn-secondary me-1 mb-1" data-dismiss="modal">Close</button>
                 </div>
             </form>

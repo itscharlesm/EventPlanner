@@ -5,6 +5,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
 
 
 // Route to show the login form
@@ -26,6 +27,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/clients', [AdminController::class, 'clients'])->name('clients');
 
     Route::get('/employees', [AdminController::class, 'employees'])->name('employees');
+    Route::post('/employee/store', [EmployeeController::class, 'store'])->name('employee.store');
+    Route::post('/save-role', [RoleController::class, 'saveRole'])->name('save.role');
+    Route::get('/roles', [RoleController::class, 'getRoles'])->name('roles');
 
     Route::get('/services', [AdminController::class, 'services'])->name('services');
 
@@ -33,8 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/logout', [SessionController::class, 'logout']);
 
-    Route::post('/save-role', [RoleController::class, 'saveRole'])->name('save.role');
-    Route::get('/roles', [RoleController::class, 'getRoles'])->name('roles');
 
 });
 
